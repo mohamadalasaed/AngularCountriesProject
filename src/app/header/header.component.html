@@ -1,0 +1,14 @@
+<header class="row mt-4 justify-content-center gap-2">
+    <div class="col-lg-4 col-md-8 col-10 d-flex align-items-center gap-2">
+        <div class="fs-5">Filter: </div>
+        <div class="w-100">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>ALL</option>
+                <option *ngFor="let c of Countries">{{ c.name }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-8 col-10">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    </div>
+</header>
