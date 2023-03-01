@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { HomeBodyComponent } from './home-body/home-body.component';
 import { FormsModule } from '@angular/forms';
+import { SpecificCountryComponent } from './specific-country/specific-country.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     HeaderComponent,
-    HomeBodyComponent
+    HomeBodyComponent,
+    SpecificCountryComponent,
   ],
   imports: [
     BrowserModule,

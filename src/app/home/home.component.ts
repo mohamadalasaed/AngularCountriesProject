@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { ApiService } from '../Models/api';
 import { Country } from '../Models/countries';
 
+const { v4: uuidv4 } = require('uuid');
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -51,6 +53,7 @@ export class HomeComponent {
     this.AllCountries = [];
     data.forEach((country:any) => {
       let c = new Country();
+      c.id = uuidv4();
       c.name = country.name.common;
       c.imgSrc = country.flags.png;
       if(this.isFirstRun){this.selectCountries.push(c)};
