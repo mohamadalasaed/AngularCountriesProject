@@ -3,12 +3,12 @@
         <div class="fs-5">Filter: </div>
         <div class="w-100">
             <select class="form-select" aria-label="Default select example" (change)="HandelSelect()" [(ngModel)]="countryName">
-                <option selected value="ALL">ALL</option>
+                <option value="ALL">ALL</option>
                 <option *ngFor="let c of Countries">{{ c.name }}</option>
             </select>
         </div>
     </div>
     <div class="col-lg-4 col-md-8 col-10">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" (keyup)="keyUp.next($event)" [(ngModel)]="countryNameSearch">
     </div>
 </header>

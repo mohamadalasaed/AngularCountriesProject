@@ -19,7 +19,7 @@ export class HomeComponent {
   }
 
   getCountryByName(country:string){
-    if(country == "ALL"){
+    if(country == "ALL" || country == ""){
       this.getCountries();
     }else{
       this.getSpecificCountry(country);
