@@ -18,6 +18,14 @@ export class HomeComponent {
     this.getCountries();
   }
 
+  getCountryByName(country:string){
+    if(country == "ALL"){
+      this.getCountries();
+    }else{
+      this.getSpecificCountry(country);
+    }
+  }
+
   getCountries(){
     this.apiCaller
       .get(this.apiSvc.getUrl('all'))
@@ -31,15 +39,16 @@ export class HomeComponent {
     this.apiCaller
       .get(this.apiSvc.getUrl(`name/${name}`))
       .subscribe((data:any) => {
-        let country = data[0];
-        this.selectedCountry = new Country();
-        this.selectedCountry.name = country.name.common;
-        this.selectedCountry.imgSrc = country.flags.png
+        this.fillArray(data);
+        // let country = data[0];
+        // this.selectedCountry = new Country();
+        // this.selectedCountry.name = country.name.common;
+        // this.selectedCountry.imgSrc = country.flags.png
       });
   }
 
   fillArray(data:any){
-    this.selectCountries = [];
+    this.AllCountries = [];
     data.forEach((country:any) => {
       let c = new Country();
       c.name = country.name.common;

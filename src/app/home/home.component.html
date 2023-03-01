@@ -1,7 +1,7 @@
 <div class="container-xl bg-light d-flex flex-column min-vh-100">
     <navbar class="sticky-top"></navbar>
 
-    <home-header [Countries]="selectCountries"></home-header>
+    <home-header [Countries]="selectCountries" (Country)="getCountryByName($event)"></home-header>
     <home-body [Countries]="AllCountries"></home-body>
 
     <footer class="mt-auto"></footer>

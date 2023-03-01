@@ -2,8 +2,8 @@
     <div class="col-lg-4 col-md-8 col-10 d-flex align-items-center gap-2">
         <div class="fs-5">Filter: </div>
         <div class="w-100">
-            <select class="form-select" aria-label="Default select example">
-                <option selected>ALL</option>
+            <select class="form-select" aria-label="Default select example" (change)="HandelSelect()" [(ngModel)]="countryName">
+                <option selected value="ALL">ALL</option>
                 <option *ngFor="let c of Countries">{{ c.name }}</option>
             </select>
         </div>

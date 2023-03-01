@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Country } from '../Models/countries';
 import { Input } from '@angular/core'
 
@@ -9,4 +9,10 @@ import { Input } from '@angular/core'
 })
 export class HeaderComponent {
   @Input() Countries : Country[] = [];
+  @Output() Country = new EventEmitter<string>();
+  countryName = '';
+
+  HandelSelect(){
+    this.Country.emit(this.countryName);
+  }
 }
