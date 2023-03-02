@@ -42,10 +42,6 @@ export class HomeComponent {
       .get(this.apiSvc.getUrl(`name/${name}`))
       .subscribe((data:any) => {
         this.fillArray(data);
-        // let country = data[0];
-        // this.selectedCountry = new Country();
-        // this.selectedCountry.name = country.name.common;
-        // this.selectedCountry.imgSrc = country.flags.png
       });
   }
 
@@ -60,7 +56,6 @@ export class HomeComponent {
       this.AllCountries.push(c)
     });
     this.isFirstRun = false;
-
   }
 
 }
