@@ -5,7 +5,7 @@ import { SpecificCountryComponent } from './specific-country/specific-country.co
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'country/:id', component: SpecificCountryComponent}
+  {path: 'country/:name', component: SpecificCountryComponent}
 ];
 
 @NgModule({

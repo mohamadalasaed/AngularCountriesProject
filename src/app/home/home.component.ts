@@ -32,7 +32,7 @@ export class HomeComponent {
     this.apiCaller
       .get(this.apiSvc.getUrl('all'))
       .subscribe((data) => {
-        console.log(data);
+        // console.log(data);
         this.fillArray(data);
       });
   }

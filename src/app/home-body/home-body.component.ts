@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Country } from '../Models/countries';
-import { Input } from '@angular/core';
+import { Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'home-body',
@@ -9,4 +9,5 @@ import { Input } from '@angular/core';
 })
 export class HomeBodyComponent {
   @Input() Countries : Country[] = [];
+  constructor(){}
 }

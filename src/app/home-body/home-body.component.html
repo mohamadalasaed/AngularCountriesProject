@@ -1,10 +1,10 @@
 <div class="row gap-3 justify-content-center my-4">
   <div class="card px-0 col-xl-2 col-md-3 col-sm-4 col-5" *ngFor="let c of Countries">
-    <a class="text-decoration-none text-dark" [routerLink]="['country',c.id]">
+    <a class="text-decoration-none text-dark" [routerLink]="['country',c.name]">
     <img src="{{ c.imgSrc }}" class="card-img-top img-fluid w-100" style="height: 9rem;">
     <div class="card-body">
       <h5 class="card-title">{{ c.name }}</h5>
-      <a [routerLink]="['country',c.id]" class="btn btn-primary">View More</a>
+      <a [routerLink]="['country',c.name]" class="btn btn-primary">View More</a>
     </div>
     </a>
   </div>
